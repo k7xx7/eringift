@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8e8e8;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff4f4;
+    font-size: 1.8rem;
+}
+
+.gallery {
+    margin: 20px;
+    padding: 10px;
+}
+
+.gallery h2 {
+    color: #fff4f4;
+    margin-bottom: 10px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photos img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.photos img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by barisdogansutcu */ 
+.love-heart:before,#switch {
+    display: none;
+   }
+   
+   .love-heart, .love-heart::after {
+    border-color: hsl(231deg 28% 86%);
+    border: 1px solid;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 10px;
+    height: 8px;
+    border-bottom: 0
+   }
+   
+   .round {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    background: hsl(0deg 0% 100%);
+    box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+    border-radius: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+    animation: check-animation2 .5s forwards;
+   }
+   
+   input:checked + label .round {
+    transform: translate(0px, 0px);
+    animation: check-animation .5s forwards;
+    background-color: hsl(0deg 0% 100%);
+   }
+   
+   @keyframes check-animation {
+    0% {
+     transform: translate(0px, 0px);
+    }
+   
+    50% {
+     transform: translate(0px, 7px);
+    }
+   
+    100% {
+     transform: translate(7px, 7px);
+    }
+   }
+   
+   @keyframes check-animation2 {
+    0% {
+     transform: translate(7px, 7px);
+    }
+   
+    50% {
+     transform: translate(0px, 7px);
+    }
+   
+    100% {
+     transform: translate(0px, 0px);
+    }
+   }
+   
+   .love-heart {
+    box-sizing: border-box;
+    position: relative;
+    transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+    display: block;
+    border-color: hsl(231deg 28% 86%);
+    cursor: pointer;
+    top: 0;
+   }
+   
+   input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
+    border-color: hsl(347deg 81% 61%);
+    box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+   }
+   
+   .love-heart::after, .love-heart .bottom {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-color: hsl(231deg 28% 86%);
+   }
+   
+   .love-heart::after {
+    right: -9px;
+    transform: rotate(90deg);
+    top: 7px;
+   }
+   
+   .love-heart .bottom {
+    width: 11px;
+    height: 11px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-color: hsl(231deg 28% 86%);
+    left: -1px;
+    top: 5px;
+    border-radius: 0px 0px 0px 5px;
+   }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* A soft pink gradient */
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    --switch_width: 2em;
+    --switch_height: 1em;
+    --thumb_color: #e8e8e8;
+    --track_color: #e8e8e8;
+    --track_active_color: #888;
+    --outline_color: #000;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: var(--switch_width);
+    height: var(--switch_height);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    box-sizing: border-box;
+    border: 2px solid var(--outline_color);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--track_color);
+    transition: .15s;
+    border-radius: var(--switch_height);
+}
+
+.slider:before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    height: var(--switch_height);
+    width: var(--switch_height);
+    border: 2px solid var(--outline_color);
+    border-radius: 100%;
+    left: -2px; /* Start at the left */
+    bottom: -2px;
+    background-color: var(--thumb_color);
+    transform: translateY(-0.2em);
+    box-shadow: 0 0.2em 0 var(--outline_color);
+    transition: .15s;
+}
+
+input:checked + .slider {
+    background-color: var(--track_active_color);
+}
+
+input:focus-visible + .slider {
+    box-shadow: 0 0 0 2px var(--track_active_color);
+}
+
+/* Raise thumb when hovered */
+input:hover + .slider:before {
+    transform: translateY(-0.3em);
+    box-shadow: 0 0.3em 0 var(--outline_color);
+}
+
+/* When the switch is checked, move the thumb to the right */
+input:checked + .slider:before {
+    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.2em); /* Move to the right */
+}
+
+/* Raise thumb when hovered & checked */
+input:hover:checked + .slider:before {
+    transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
+    box-shadow: 0 0.3em 0 var(--outline_color);
+}
